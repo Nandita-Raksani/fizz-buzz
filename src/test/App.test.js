@@ -29,4 +29,8 @@ describe(("<FizzBuzzer/> Fizz Buzz functionality"), () => {
     wrapper.find('input').simulate('change', { target: { value: 1 } });
     expect(wrapper.find(FizzBuzzer).length).toBe(1);
   })
+  it("Should generate two FizzBuzzer components for 2", ()=>{
+    wrapper.find('input').simulate('change', { target: { value: 2 } });
+    expect(wrapper.find(FizzBuzzer).length).toBe(2);
+  })
 });

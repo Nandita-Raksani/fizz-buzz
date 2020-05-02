@@ -4,7 +4,7 @@ const FizzBuzzer = (props) => {
 
     const doFizzBuzz = () => {
       const number = props.number;
-      return 1;
+      return number;
     }
     
   return (

@@ -8,13 +8,14 @@ function App() {
     setNumber(e.target.value); 
   }
 
+  let result = []
   const generator = () =>{
-    if(number == 1){
-    return <FizzBuzzer className="num" key={number} number={number}></FizzBuzzer>
+    for (let x = 1; x <= number; x++) {
+      result.push(<FizzBuzzer className="num" key={x} number={x}></FizzBuzzer>)
     }
-    return null;
+    return result
   }
-  
+
   return (
     <div className="App">
       <header className="App-header">
