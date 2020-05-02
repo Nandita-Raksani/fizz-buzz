@@ -4,17 +4,20 @@ const FizzBuzzer = (props) => {
 
     const doFizzBuzz = () => {
       const number = props.number;
-      if(number % 15 == 0){
+      if(divisibleBy(number, 15)){
         return 'FizzBuzz';
       }
-      if(number % 3 == 0){
+      if(divisibleBy(number, 3)){
           return 'Fizz';
-      }if(number % 5 == 0){
+      }
+      if(divisibleBy(number, 5)){
         return 'Buzz';
       }
       return number;
     }
-    
+    const divisibleBy = (num, divisor) => {
+        return (num % divisor === 0)
+    }
   return (
       <div>      
         <form>
