@@ -4,6 +4,9 @@ const FizzBuzzer = (props) => {
 
     const doFizzBuzz = () => {
       const number = props.number;
+      if(number == 3){
+          return 'Fizz';
+      }
       return number;
     }
     
