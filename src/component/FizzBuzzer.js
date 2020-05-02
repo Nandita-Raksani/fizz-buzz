@@ -4,7 +4,7 @@ const FizzBuzzer = (props) => {
 
     const doFizzBuzz = () => {
       const number = props.number;
-      if(number == 15){
+      if(number % 15 == 0){
         return 'FizzBuzz';
       }
       if(number % 3 == 0){
