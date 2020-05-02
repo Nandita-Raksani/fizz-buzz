@@ -21,16 +21,17 @@ describe(("<App/> component"), () => {
 });
 
 describe(("<FizzBuzzer/> Fizz Buzz functionality"), () => {
-  let wrapper;
+  let wrapper, inputText;
   beforeEach(() => {
     wrapper = shallow(<App />);
+    inputText = wrapper.find('input');
   });
   it("Should generate one FizzBuzzer component for 1", ()=>{
-    wrapper.find('input').simulate('change', { target: { value: 1 } });
+    inputText.simulate('change', { target: { value: 1 } });
     expect(wrapper.find(FizzBuzzer).length).toBe(1);
   })
   it("Should generate two FizzBuzzer components for 2", ()=>{
-    wrapper.find('input').simulate('change', { target: { value: 2 } });
+    inputText.simulate('change', { target: { value: 2 } });
     expect(wrapper.find(FizzBuzzer).length).toBe(2);
   })
 });
